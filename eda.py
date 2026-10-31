@@ -43,9 +43,10 @@ plt.rcParams.update({
 
 
 def run_eda(df: pd.DataFrame = None):
-    print("=" * 70)
+    print("=" * 75)
+    print("🎓 PROJECT: Exam Result Prediction Using Predictive Analytics")
     print("EXPLORATORY DATA ANALYSIS (EDA)")
-    print("=" * 70)
+    print("=" * 75)
 
     if df is None:
         if not CLEAN_FILE.exists():

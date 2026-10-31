@@ -1,5 +1,9 @@
 # Exam Result Prediction Using Predictive Analytics
 
+**Project Name**: Exam Result Prediction Using Predictive Analytics  
+**Course / Domain**: Predictive Analytics Assessment  
+**Goal**: Predicting student academic outcome (Pass vs. Fail) using Machine Learning  
+
 A simple, beginner-friendly Predictive Analytics project that predicts whether a student will **Pass** or **Fail** (`pass_status`) based on their study habits, attendance, past academic performance, and preparation metrics.
 
 ---

@@ -18,9 +18,10 @@ OUTPUT_DIR.mkdir(exist_ok=True)
 
 
 def clean_student_data():
-    print("=" * 70)
+    print("=" * 75)
+    print("🎓 PROJECT: Exam Result Prediction Using Predictive Analytics")
     print("STAGE 1: LOADING & INSPECTING DATASET")
-    print("=" * 70)
+    print("=" * 75)
 
     if not DATA_FILE.exists():
         raise FileNotFoundError(f"Dataset not found at {DATA_FILE}")

@@ -77,9 +77,10 @@ GRAPH_DIR.mkdir(exist_ok=True)
 
 
 def train_and_evaluate(sample_size: int = 20000):
-    print("=" * 70)
+    print("=" * 75)
+    print("🎓 PROJECT: Exam Result Prediction Using Predictive Analytics")
     print("STAGE 1: VERIFYING DATASET & TARGET COLUMN")
-    print("=" * 70)
+    print("=" * 75)
 
     # 1. Verify dataset existence
     if not DATA_FILE.exists():
@@ -263,7 +264,7 @@ def train_and_evaluate(sample_size: int = 20000):
     acc_df = successful_models.sort_values("Accuracy", ascending=False)
     colors = ["#2b5c8f", "#2a9d8f", "#e76f51", "#f4a261", "#457b9d"]
     bars = plt.bar(acc_df["Model"], acc_df["Accuracy"] * 100, color=colors[:len(acc_df)], width=0.5, edgecolor="black")
-    plt.title("Model Accuracy Comparison (Test Set)", fontsize=13, fontweight="bold", pad=12)
+    plt.title("Exam Result Prediction: Model Accuracy Comparison (Test Set)", fontsize=13, fontweight="bold", pad=12)
     plt.xlabel("Classification Model", fontsize=11, fontweight="bold")
     plt.ylabel("Test Accuracy (%)", fontsize=11, fontweight="bold")
     plt.ylim(0, 100)
@@ -287,7 +288,7 @@ def train_and_evaluate(sample_size: int = 20000):
         value_name="Score"
     )
     sns.barplot(data=metrics_melt, x="Model", y="Score", hue="Metric", palette="Set2")
-    plt.title("Model Performance Comparison: Precision, Recall, and F1-Score", fontsize=13, fontweight="bold", pad=12)
+    plt.title("Exam Result Prediction: Model Performance Comparison (Precision, Recall, F1)", fontsize=13, fontweight="bold", pad=12)
     plt.xlabel("Classification Model", fontsize=11, fontweight="bold")
     plt.ylabel("Score (0.0 to 1.0)", fontsize=11, fontweight="bold")
     plt.ylim(0, 1.15)
@@ -314,7 +315,7 @@ def train_and_evaluate(sample_size: int = 20000):
             axes[i].set_ylabel("Actual Label", fontsize=9)
         else:
             axes[i].set_ylabel("")
-    plt.suptitle("Confusion Matrices for All Five Classification Models", fontsize=13, fontweight="bold", y=1.05)
+    plt.suptitle("Exam Result Prediction: Confusion Matrices for All Five Classification Models", fontsize=13, fontweight="bold", y=1.05)
     plt.tight_layout()
     g3 = GRAPH_DIR / "confusion_matrices.png"
     plt.savefig(g3, dpi=300, bbox_inches="tight")
@@ -331,7 +332,7 @@ def train_and_evaluate(sample_size: int = 20000):
 
     # Diagonal random chance line
     plt.plot([0, 1], [0, 1], "k--", label="Random Chance (AUC = 0.5000)", alpha=0.7)
-    plt.title("Receiver Operating Characteristic (ROC) Curves", fontsize=13, fontweight="bold", pad=12)
+    plt.title("Exam Result Prediction: Receiver Operating Characteristic (ROC) Curves", fontsize=13, fontweight="bold", pad=12)
     plt.xlabel("False Positive Rate (1 - Specificity)", fontsize=11, fontweight="bold")
     plt.ylabel("True Positive Rate (Sensitivity / Recall)", fontsize=11, fontweight="bold")
     plt.xlim([0.0, 1.0])

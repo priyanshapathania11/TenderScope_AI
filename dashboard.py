@@ -51,6 +51,18 @@ df = load_data()
 metrics_df = load_metrics()
 model = load_model()
 
+# Sidebar Branding
+with st.sidebar:
+    st.title("🎓 Project Navigation")
+    st.markdown("**Project Name:**")
+    st.info("Exam Result Prediction Using Predictive Analytics")
+    st.markdown("---")
+    st.write("📊 **Course**: Predictive Analytics Assessment")
+    st.write("📁 **Dataset**: `student_exam_performance.csv` (100,000 records)")
+    st.write("🎯 **Target**: `pass_status` (Pass / Fail)")
+    st.write("🏆 **Best Model**: Support Vector Machine (84.78% Accuracy)")
+    st.markdown("---")
+
 # Header
 st.title("🎓 Exam Result Prediction Using Predictive Analytics")
 st.subheader("Predicting Student Pass / Fail Outcomes Using Machine Learning")
@@ -81,7 +93,7 @@ tab_models, tab_predict, tab_charts, tab_data = st.tabs([
 
 # TAB 1: MODEL COMPARISON
 with tab_models:
-    st.markdown("### Benchmark of Exactly Five Classification Models")
+    st.markdown("### 🤖 Exam Result Prediction Using Predictive Analytics: Model Benchmark")
     st.markdown("""
     All models were trained on student preparation features, past performance, and study habits 
     (with all post-exam outcome columns excluded to prevent data leakage).
@@ -191,7 +203,7 @@ with tab_predict:
 
 # TAB 3: CHARTS
 with tab_charts:
-    st.markdown("### 📊 Model Evaluation Graphs")
+    st.markdown("### 📊 Exam Result Prediction Using Predictive Analytics: Evaluation Graphs")
     
     col_c1, col_c2 = st.columns(2)
     with col_c1:

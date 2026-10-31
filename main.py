@@ -15,10 +15,10 @@ from train_models import train_and_evaluate
 
 
 def main():
-    print("\n" + "=" * 70)
-    print("🎓 EXAM RESULT PREDICTION USING PREDICTIVE ANALYTICS")
+    print("\n" + "=" * 75)
+    print("🎓 PROJECT: Exam Result Prediction Using Predictive Analytics")
     print("Predicting Student Pass / Fail Outcomes Using Machine Learning")
-    print("=" * 70 + "\n")
+    print("=" * 75 + "\n")
 
     # Step 1: Data Cleaning
     print("[STEP 1/3] Cleaning raw student performance data...")
@@ -32,9 +32,10 @@ def main():
     print("\n[STEP 3/3] Training and evaluating exactly five classification models...")
     results_df, best_model = train_and_evaluate()
 
-    print("\n" + "=" * 70)
-    print("🎉 PROJECT RUN COMPLETED SUCCESSFULLY!")
-    print("=" * 70)
+    print("\n" + "=" * 75)
+    print("🎉 PROJECT: Exam Result Prediction Using Predictive Analytics")
+    print("Execution completed successfully!")
+    print("=" * 75)
     print(f"Top Performing Model : {best_model}")
     print(f"Top Test Accuracy    : {results_df.loc[results_df['Model'] == best_model, 'Accuracy'].values[0]*100:.2f}%")
     print(f"Top Test F1-Score    : {results_df.loc[results_df['Model'] == best_model, 'F1-Score'].values[0]*100:.2f}%")
