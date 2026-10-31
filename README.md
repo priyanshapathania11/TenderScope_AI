@@ -1,5 +1,5 @@
 @'
-# TenderScope AI: Government Tender Analysis and Predictive Analytics
+#Exam prediction analysis
 
 ## Project Overview
 TenderScope AI analyzes government tender records using Python, data cleaning, visualization, and predictive analytics.
